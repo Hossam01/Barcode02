@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Barcode</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="enter_your_BrithDate">Enter your birthdate</string>
+</resources>
