@@ -5,4 +5,7 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_your_number">Enter your number</string>
     <string name="enter_your_BrithDate">Enter your birthdate</string>
+
+    <string name="TV_Header">Requests</string>
+    <string name="btn_Get">Get</string>
 </resources>
