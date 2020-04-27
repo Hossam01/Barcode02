@@ -1,8 +1,12 @@
 package com.example.barcode;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,6 +66,7 @@ public class Main2Activity extends AppCompatActivity {
         } catch (BadgesNotSupportedException badgesNotSupportedException) {
             Log.d(TAG, badgesNotSupportedException.getMessage());
         }
+        checkpermission();
 
 
 
@@ -84,5 +89,21 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
+    }
+
+
+    public void checkpermission()
+    {
+        if (ContextCompat.checkSelfPermission(Main2Activity.this,
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(Main2Activity.this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)){
+                ActivityCompat.requestPermissions(Main2Activity.this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            }else{
+                ActivityCompat.requestPermissions(Main2Activity.this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            }
+        }
     }
 }
